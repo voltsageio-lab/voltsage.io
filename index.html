@@ -3,22 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VoltSage</title>
+
+  <!-- SEO: Title + Description -->
+  <title>Maintenance AI Agent for Production Line Operations | VoltSage</title>
+  <meta
+    name="description"
+    content="VoltSage Sentinel is a maintenance AI agent for production lines, enabling predictive maintenance, real-time equipment monitoring, and intelligent industrial operations."
+  />
+
+  <!-- SEO: Canonical (replace with your final domain if different) -->
+  <link rel="canonical" href="https://voltsage.io/" />
+
+  <!-- Social Sharing (Open Graph) -->
+  <meta property="og:title" content="Maintenance AI Agent for Production Line Operations | VoltSage" />
+  <meta property="og:description" content="VoltSage Sentinel is a maintenance AI agent for production lines, enabling predictive maintenance, real-time equipment monitoring, and intelligent industrial operations." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://voltsage.io/" />
+  <meta property="og:image" content="https://voltsage.io/assets/logo.png" />
+
   <link rel="stylesheet" href="assets/main.css" />
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2G75PDHCFK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2G75PDHCFK');
-</script>
-  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2G75PDHCFK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2G75PDHCFK');
+  </script>
 </head>
-<body>
 
+<body>
   <header id="site-header">
     <div class="brand">
       <img src="assets/logo.png" alt="VoltSage logo" class="logo" />
@@ -27,9 +42,32 @@
   </header>
 
   <main id="hero">
-    <h1>Embedded AI Solutions for Power Grid Equipment</h1>
-    <p class="tagline">Making grid hardware inherently intelligent and self-aware</p>
+    <h1>Maintenance AI Agent for Production Line Operations</h1>
+    <p class="tagline">Upgrading industrial maintenance with predictive intelligence and real-time monitoring</p>
   </main>
+
+  <!-- SEO Content Section (adds descriptive text for Google + users) -->
+  <section id="seo-content">
+    <h2>What We Do</h2>
+    <p>
+      VoltSage Sentinel is a maintenance AI agent designed for production line operations.
+      It helps manufacturers monitor equipment health in real time, detect anomalies, and predict failures early
+      to reduce unplanned downtime and improve operational efficiency.
+    </p>
+
+    <h2>How It Helps</h2>
+    <p>
+      By combining sensor data with embedded AI analysis, VoltSage Sentinel provides predictive maintenance alerts,
+      recommended actions, and continuous learning from real-world operations—modernizing legacy production lines
+      without complex system overhaul.
+    </p>
+
+    <h2>Industry Applications</h2>
+    <p>
+      Common use cases include production line maintenance, industrial utilities, and power grid equipment monitoring
+      where reliability and uptime are critical.
+    </p>
+  </section>
 
   <section id="contact">
     <h2>Get in touch</h2>
@@ -37,56 +75,62 @@
 
     <form id="contact-form" action="https://formspree.io/f/xnnlqnwk" method="POST">
       <input type="text" name="_gotcha" id="gotcha" autocomplete="off" tabindex="-1" aria-hidden="true" />
+
       <div class="field">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required />
       </div>
+
       <div class="field">
         <label for="company">Company (optional)</label>
         <input type="text" id="company" name="company" />
       </div>
+
       <div class="field">
         <label for="email">Email</label>
         <input type="email" id="email" name="_replyto" required />
       </div>
+
       <div class="field">
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="6" required></textarea>
       </div>
+
       <button type="submit" class="btn">Send Message</button>
       <p id="status" role="status" aria-live="polite"></p>
     </form>
   </section>
 
   <footer id="site-footer">
-  <p>© 2025 VoltSage. All rights reserved.  
-  <a href="privacy.html" style="color:#4c8dff;text-decoration:none;">Privacy Policy</a> ·
-  <a href="terms.html" style="color:#4c8dff;text-decoration:none;">Terms of Use</a></p>
-</footer>
+    <p>© 2025 VoltSage. All rights reserved.
+      <a href="privacy.html" style="color:#4c8dff;text-decoration:none;">Privacy Policy</a> ·
+      <a href="terms.html" style="color:#4c8dff;text-decoration:none;">Terms of Use</a>
+    </p>
+  </footer>
 
   <script>
-  const form = document.getElementById('contact-form');
-  const statusEl = document.getElementById('status');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    statusEl.textContent = 'Sending...';
-    const data = new FormData(form);
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        statusEl.textContent = '✅ Thank you! Your message has been sent.';
-        form.reset();
-      } else {
-        statusEl.textContent = '❌ Oops! There was a problem submitting your form.';
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = 'Sending...';
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          statusEl.textContent = '✅ Thank you! Your message has been sent.';
+          form.reset();
+        } else {
+          statusEl.textContent = '❌ Oops! There was a problem submitting your form.';
+        }
+      } catch (err) {
+        statusEl.textContent = '❌ Network error. Please try again.';
       }
-    } catch (err) {
-      statusEl.textContent = '❌ Network error. Please try again.';
-    }
-  });
+    });
   </script>
 </body>
 </html>
